@@ -153,8 +153,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 0
-  PlanePrefab: {fileID: 1793906138370309569, guid: 79a2f76666faf8344882642bac8f7207, type: 3}
+  PlaneSpawn: {fileID: 1793906138370309569, guid: 79a2f76666faf8344882642bac8f7207, type: 3}
   spawn: {fileID: 1208619617421312359, guid: 79a2f76666faf8344882642bac8f7207, type: 3}
+  spawnLocation: 0
 --- !u!4 &158476210
 Transform:
   m_ObjectHideFlags: 0
