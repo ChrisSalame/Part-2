@@ -8,9 +8,10 @@ using UnityEngine;
 public class PlaneSpawner : MonoBehaviour
 {
     public float timer = 0;
-    public GameObject PlanePrefab;
+    public GameObject PlaneSpawn;
     public Transform spawn;
     public float spawnLocation;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,18 +24,16 @@ public class PlaneSpawner : MonoBehaviour
         if (timer < 5.0)
         {
             timer += Time.deltaTime;
-            print(timer);
-            
-            
+            //print(timer);
+
         }
-        
-        Instantiate(PlanePrefab, spawn.position, spawn.rotation);
         if (timer >= 5.0) 
         {
-            timer = 0;
-            
+            Vector3 randomPlaneSpawn = new Vector3(Random.Range(-5, 5), Random.Range(-5, 5), 0);
+
+            Instantiate(PlaneSpawn, randomPlaneSpawn, transform.rotation);
+            timer = 0;    
         }
-
-
     }
+
 }
