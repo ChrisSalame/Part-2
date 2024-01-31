@@ -10,6 +10,7 @@ public class PlaneSpawner : MonoBehaviour
     public float timer = 0;
     public GameObject PlanePrefab;
     public Transform spawn;
+    public float spawnLocation;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +27,7 @@ public class PlaneSpawner : MonoBehaviour
             
             
         }
+        
         Instantiate(PlanePrefab, spawn.position, spawn.rotation);
         if (timer >= 5.0) 
         {
