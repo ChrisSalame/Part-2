@@ -21,16 +21,16 @@ public class PlaneSpawner : MonoBehaviour
     {
         if (timer < 5.0)
         {
-            timer = Time.deltaTime;
+            timer += Time.deltaTime;
             print(timer);
             
             
         }
-
+        Instantiate(PlanePrefab, spawn.position, spawn.rotation);
         if (timer >= 5.0) 
         {
             timer = 0;
-            Instantiate(PlanePrefab, spawn.position, spawn.rotation);
+            
         }
 
 
