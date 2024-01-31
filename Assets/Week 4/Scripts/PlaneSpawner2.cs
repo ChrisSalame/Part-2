@@ -28,7 +28,7 @@ public class PlaneSpawner2 : MonoBehaviour
         {
             Vector3 randomPlaneSpawn = new Vector3(Random.Range(-5, 5), Random.Range(-5, 5), 0);
 
-            Instantiate(PlaneSpawn, randomPlaneSpawn, transform.rotation);
+            Instantiate(PlaneSpawn, randomPlaneSpawn, transform.rotation = Quaternion.Euler(0,0, Random.Range(-180,180)));
 
             timer = 0;
         }
