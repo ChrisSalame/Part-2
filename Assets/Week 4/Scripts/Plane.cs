@@ -14,6 +14,7 @@ public class Plane : MonoBehaviour
     public float speed = 1;
     public AnimationCurve landing;
     float landingTimer;
+    public Sprite[] planeSprites;
 
     void OnMouseDown()
     {
@@ -40,6 +41,7 @@ public class Plane : MonoBehaviour
         lineRenderer.SetPosition(0, transform.position);
         rigidbody = GetComponent<Rigidbody2D>();
         speed = Random.Range(1, 3);
+        GetComponent<SpriteRenderer>().sprite = planeSprites[Random.Range(0, planeSprites.Length)];
     }
 
     void FixedUpdate()

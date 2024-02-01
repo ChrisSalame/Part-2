@@ -6,8 +6,6 @@ public class PlaneSpawner2 : MonoBehaviour
 {
     public float timer = 0;
     public GameObject PlaneSpawn;
-    public Transform spawn;
-    public float spawnLocation;
 
     // Start is called before the first frame update
     void Start()
