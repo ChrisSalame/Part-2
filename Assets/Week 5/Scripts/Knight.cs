@@ -50,7 +50,7 @@ public class Knight : MonoBehaviour
     {
         health -= damage;
         health = Mathf.Clamp(health, 0, maxHealth);
-        if (health < 0) 
+        if (health <= 0) 
         {
             animator.SetTrigger("Death");
         }
