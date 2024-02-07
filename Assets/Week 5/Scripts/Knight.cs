@@ -10,8 +10,8 @@ public class Knight : MonoBehaviour
     Vector2 movement;
     public float speed = 3;
     bool clickingOnSelf = false;
-    float health;
-    float maxHealth = 5;
+    public float health;
+    public float maxHealth = 5;
 
     void Start()
     {
