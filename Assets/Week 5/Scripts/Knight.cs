@@ -10,11 +10,14 @@ public class Knight : MonoBehaviour
     Vector2 movement;
     public float speed = 3;
     bool clickingOnSelf = false;
+    float health;
+    float maxHealth = 5;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        health = maxHealth;
     }
 
     private void FixedUpdate()
@@ -37,10 +40,23 @@ public class Knight : MonoBehaviour
     private void OnMouseDown()
     {
         clickingOnSelf = true;
-        animator.SetTrigger("TakeDamage");
+        TakeDamage(1);
     }
     private void OnMouseUp() 
     {
         clickingOnSelf = false;
+    }
+    void TakeDamage(float damage) 
+    {
+        health -= damage;
+        health = Mathf.Clamp(health, 0, maxHealth);
+        if (health < 0) 
+        {
+            animator.SetTrigger("Death");
+        }
+        else
+        {
+            animator.SetTrigger("TakeDamage");
+        }
     }
 }
