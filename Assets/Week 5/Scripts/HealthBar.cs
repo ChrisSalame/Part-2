@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    Slider slider;
+    public Slider slider;
 
     public void TakeDamage(float damage) 
     {
