@@ -42,6 +42,7 @@ public class PlayerCar : MonoBehaviour
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         int nextSceneIndex = (currentSceneIndex + 1) % SceneManager.sceneCountInBuildSettings;
         SceneManager.LoadScene(nextSceneIndex);
+        
     }
 
 }

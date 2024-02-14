@@ -17,7 +17,7 @@ public class Weapon : MonoBehaviour
     {
         transform.Translate(wSpeed * Time.deltaTime, 0, 0);
         wTimer += Time.deltaTime;
-        Debug.Log(wTimer);
+        //Debug.Log(wTimer);
         if (wTimer > 5.0) 
         {
             Destroy(gameObject);
