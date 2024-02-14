@@ -21,7 +21,7 @@ public class Knight : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         health = PlayerPrefs.GetFloat("health", maxHealth);
-        healthBar = health;
+        
     }
 
     private void FixedUpdate()
