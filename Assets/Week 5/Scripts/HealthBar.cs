@@ -7,9 +7,22 @@ public class HealthBar : MonoBehaviour
 {
     public Slider slider;
 
+    public void Start()
+    {
+        slider.value = PlayerPrefs.GetFloat("HealthBarNumber", slider.value);
+    }
+
+
     public void TakeDamage(float damage) 
     {
         slider.value -= damage;
+
+        healthValueSceneSwapSave();
+    }
+
+    public void healthValueSceneSwapSave()
+    {
+        PlayerPrefs.SetFloat("HealthBarNumber", slider.value);
     }
 
 }
