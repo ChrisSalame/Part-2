@@ -10,6 +10,7 @@ public class HealthBar : MonoBehaviour
     public void Start()
     {
         slider.value = PlayerPrefs.GetFloat("HealthBarNumber", slider.value);
+        SendMessage("healthBar", slider.value, SendMessageOptions.DontRequireReceiver);
     }
 
 
