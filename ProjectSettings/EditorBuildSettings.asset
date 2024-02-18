@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Assignment/Scenes/Scene 1 Front View.unity
     guid: 734fdf2bab82b1849906d2a3edb075e3
+  - enabled: 1
+    path: Assets/Assignment/Scenes/Scene 2 Overhead View.unity
+    guid: 0a7e4f3654693324c99849b86aae7af1
   m_configObjects: {}

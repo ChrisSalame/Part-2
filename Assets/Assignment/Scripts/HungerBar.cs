@@ -9,6 +9,11 @@ public class HealthSystem : MonoBehaviour
     public Slider hungerBar;
     //public float hungerDecline = 0.00001f;
 
+    public void Start()
+    {
+        hungerBar.value = PlayerPrefs.GetFloat("hungerBar", hungerBar.value);
+    }
+
 
     private void Update()
     {
@@ -19,7 +24,15 @@ public class HealthSystem : MonoBehaviour
     public void feedFood(float feed)
     {
         hungerBar.value += feed;
+        saveHungerValue();
     }
+
+    public void saveHungerValue()
+    {
+        PlayerPrefs.SetFloat("hungerBar",hungerBar.value);
+
+    }
+
     public void increaseHunger(float starve)
     {
         hungerBar.value += starve;
