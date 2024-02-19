@@ -29,6 +29,8 @@ public class PetTwoLERP : MonoBehaviour
         //This is what moves the actual object
         transform.position = Vector3.Lerp(petTwoStartPosition.position, petTwoNewPosition, petLERPinterpolation);
 
+        //This the LERP speed by the internal timer
+        petLERPSpeed = petLERPSpeed + Time.deltaTime; 
 
     }
 }
