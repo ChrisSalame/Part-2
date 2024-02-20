@@ -515,7 +515,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   petLERPSpeed: 0
-  petLERPinterpolation: 0
+  petLERPinterpolation: 15
 --- !u!1 &499494141
 GameObject:
   m_ObjectHideFlags: 0
