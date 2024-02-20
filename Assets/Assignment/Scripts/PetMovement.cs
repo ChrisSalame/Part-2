@@ -45,9 +45,18 @@ public class PetMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        petAnimator.SetFloat("Pet Movement",petMovement.magnitude);
+        //This makes it so that the crab can move from clicking the map but prevents the crab from moving somewhere
+        //the UI elements are such as under the button when the button is pressed
         if (Input.GetMouseButtonDown(0) && !clickingOnSelf && !EventSystem.current.IsPointerOverGameObject())
         {
             newPetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            //This makes it so that when the player right clicks the crab turns around
+            petAnimator.SetTrigger("Shell");
         }
 
 
