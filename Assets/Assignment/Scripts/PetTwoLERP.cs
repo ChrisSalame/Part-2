@@ -6,7 +6,8 @@ using UnityEngine;
 
 public class PetTwoLERP : MonoBehaviour
 {
-    // Start is called before the first frame update
+    //These are the variables that are needed for a lerp, the start position and end position are what they state, the start of the object and the end position.
+    //The speed and interpolation are what determine how fast it is and how long it takes to get from point a to point b
 
     public Transform petTwoStartPosition;
     public Vector3 petTwoNewPosition = new Vector3(8, -3, 0);

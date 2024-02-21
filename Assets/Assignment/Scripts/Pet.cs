@@ -12,6 +12,7 @@ public class Pet : MonoBehaviour
 
     void Start()
     {
+        //This manages the hunger bar which the player can interact with. The lower the bar is, the hungier the pet is. 
         hunger = MinHunger;
     }
 
@@ -22,7 +23,8 @@ public class Pet : MonoBehaviour
     }
     private void OnMouseDown()
     {
-
+        //By pressing this is increases the hunger bar and feeds the pet. This code checks if mouse is pressed on the feed button and uses send message to 
+        //change the hunger bar on the next scene
         mousePress = true;
         gameObject.SendMessage("feedFood", 1);
 
@@ -33,6 +35,7 @@ public class Pet : MonoBehaviour
 
     }
 
+    //This is the code that manages the variable that is represented by the bar
     public void feedFood(float feed)
     {
         hunger += feed;
