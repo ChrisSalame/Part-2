@@ -20,6 +20,7 @@ public class FootballPlayer : MonoBehaviour
 
        spriteRenderer = GetComponent<SpriteRenderer>();
         Selected(false);
+        rb = GetComponent<Rigidbody2D>();
     }
 
 

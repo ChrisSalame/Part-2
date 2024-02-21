@@ -36,7 +36,7 @@ public class Controller : MonoBehaviour
 
     private void Update()
     {
-        if (SelectedPlayer != null) return;
+        if (SelectedPlayer == null) return;
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
