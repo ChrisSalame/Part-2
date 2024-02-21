@@ -9,6 +9,7 @@ public class Ball : MonoBehaviour
     public static float ball;
     Rigidbody2D rbBall;
     public float Score = 0;
+    public float resetV = 0;
 
 
     void Start()
@@ -26,7 +27,8 @@ public class Ball : MonoBehaviour
     {
         Score += 1;
         Debug.Log(Score);
-        rbBall.transform.position = new Vector2(-12f,-3.5f);
+        rbBall.transform.position = new Vector2(0,-1);
+        rbBall.velocity = new Vector2(0f, 0f);
 
     }
 
