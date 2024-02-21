@@ -54,4 +54,12 @@ public class Controller : MonoBehaviour
             direction = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - SelectedPlayer.transform.position).normalized * charge;
         }
     }
+
+    void ScoreBoard()
+    { 
+
+    }
+
+
+
 }
