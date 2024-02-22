@@ -4,6 +4,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor.Experimental.GraphView;
+using UnityEngine.SocialPlatforms.Impl;
+using TMPro;
 
 public class Controller : MonoBehaviour
 {
@@ -12,6 +14,10 @@ public class Controller : MonoBehaviour
     public float maxCharge = 1;
     Vector2 direction;
     public Slider chargeSlider;
+    public Text pointsScored;
+    public static float totalScored = 0;
+    public TextMeshProUGUI scoreBoard;
+
 
     public static void SetSelectedPlayer(FootballPlayer player) 
     {
@@ -53,12 +59,11 @@ public class Controller : MonoBehaviour
         {
             direction = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - SelectedPlayer.transform.position).normalized * charge;
         }
+        scoreBoard.text = "Goals:" +totalScored.ToString();
+        
     }
 
-    void ScoreBoard()
-    { 
 
-    }
 
 
 
